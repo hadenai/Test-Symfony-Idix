@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ListFilmController!{% endblock %}
+
+{% block body %}
+
+    <article>
+        <div class="article">
+            <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
+                <div class="metadata"> Produit le {{ film.date | date('d/m/Y') }}
+                    à {{ film.date | date('H:i') }} </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{ film.title }}</h4>
+                    <p class="card-text">{{ film.abstract }}</p>
+
+                    {% for person in film.person %}
+                        <p class="card-text">{{ person.name }}</p>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+{% endblock %}

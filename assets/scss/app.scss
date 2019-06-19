@@ -1,9 +1,17 @@
 @import "vars";
 
 body {
-    background-color: $secondary-color;
+    background-color:white;
+    text-align: center;
 }
-
-a {
-    color: $warm-color;
+.title{
+   margin-top: 50px;
+  margin-bottom: 10px;
+}
+.form{
+padding-right: 50px;
+}
+.article{
+  margin-top: 50px;
+  margin-left: 30%;
 }

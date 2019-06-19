@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}One Day One Movie{% endblock %}
+
+{% block body %}
+    <div class="title">
+        <h4> Ajouter un personnage!</h4>
+    </div>
+    <div class="form">
+    {{ form_start(form) }}
+
+    {{ form_row(form.name, {'label': 'Nom', 'attr' :{'placeholder':"Entrez votre Nom... " }}) }}
+    {{ form_row(form.films) }}
+
+    <button type="submit" class="btn btn-outline-primary">Ajouter</button>
+    {{ form_end(form) }}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ListFilmController!{% endblock %}
+
+{% block body %}
+
+    <section class="articles">
+        {% for film in films %}
+            <article>
+                <h5>{{ film.title }} </h5>
+                <div class="metadata"> Produit le {{ film.date | date('d/m/Y') }}
+                à {{ film.date | date('H:i') }} </div>
+                <a href="{{ path('film_show', {'id': film.id}) }}" class="btn btn-outline-primary btn-sm ">Lire la suite</a>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}
